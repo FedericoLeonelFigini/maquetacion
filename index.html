@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sitio • Menú según boceto</title>
+  <meta name="description" content="Encabezado con logo centrado y menú vertical: Inicio, Servicios, Productos, ¿Quiénes somos?, Ayuda.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Lienzo para el efecto de fondo -->
+  <canvas id="bg"></canvas>
+
+  <!-- Contenido -->
+  <header class="site-header" role="banner">
+    <img src="logopng.png" alt="Logo del sitio" class="logo" />
+    <nav class="menu" aria-label="Menú principal">
+      <span class="menu-title">• MENÚ •</span>
+      <ul class="menu-list">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#quienes">¿Quiénes somos?</a></li>
+        <li><a href="#ayuda">Ayuda</a></li>
+        <li><button class="ghost-link" id="verBoceto" type="button">BOCETO DEL CLIENTE</button></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+  <!-- Modal para mostrar la imagen del boceto -->
+  <div class="modal" id="modalBoceto" aria-hidden="true" role="dialog" aria-labelledby="tituloBoceto">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Cerrar" data-close>✕</button>
+      <h3 id="tituloBoceto">Boceto del cliente</h3>
+      <img src="boceto.jpg" alt="Boceto dibujado por el cliente con el menú vertical" />
+      <p class="modal-note">Usá esta vista para comparar el diseño con la página.</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

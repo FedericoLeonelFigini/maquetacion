@@ -1,0 +1,138 @@
+/* ======= Reset mínimo ======= */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #111;
+  overflow-x: hidden;
+}
+
+/* Canvas de fondo detrás de todo */
+#bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* ======= Encabezado con logo centrado ======= */
+.site-header {
+  padding: 32px 16px 12px;
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,.25));
+}
+
+/* ======= Menú vertical como en el boceto ======= */
+.menu-title {
+  display: inline-block;
+  margin: 8px 0 4px;
+  letter-spacing: 0.15em;
+  color: #444;
+  font-weight: 700;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.menu-list a,
+.ghost-link {
+  display: block;
+  text-decoration: none;
+  color: #111;
+  background: rgba(255,255,255,.6);
+  border: 1px solid rgba(0,0,0,.08);
+  padding: 10px 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(3px);
+  transition: transform .12s ease, box-shadow .12s ease, background .2s ease;
+  text-align: center;
+  cursor: pointer;
+}
+
+.menu-list a:hover,
+.ghost-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.12);
+  background: rgba(255,255,255,.9);
+}
+
+.menu-list a.active {
+  outline: 2px solid rgba(0,0,0,.15);
+}
+
+/* ======= Contenido de ejemplo ======= */
+.content {
+  max-width: 920px;
+  margin: 24px auto 80px;
+  padding: 0 16px 48px;
+  display: grid;
+  gap: 18px;
+}
+
+.card {
+  background: rgba(255,255,255,.7);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 16px;
+  padding: 18px 16px;
+  backdrop-filter: blur(4px);
+}
+
+/* ======= Modal ======= */
+.modal { 
+  position: fixed; inset: 0; display: none; 
+  align-items: center; justify-content: center; 
+  z-index: 20; 
+}
+.modal[aria-hidden="false"] { display: flex; }
+
+.modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,.45);
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  width: min(92vw, 900px);
+  max-height: 86vh;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  overflow: auto;
+}
+
+.modal-content img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.modal-close {
+  position: absolute; top: 10px; right: 10px;
+  border: 0; background: #000; color: #fff;
+  width: 36px; height: 36px; border-radius: 10px;
+  cursor: pointer;
+}
+.modal-note { color: #555; margin: 6px 2px 0; }
+
+/* ======= Responsive ======= */
+@media (min-width: 768px) {
+  .logo { width: 140px; }
+  .menu-list { gap: 10px; }
+  .menu-list a, .ghost-link { padding: 12px 18px; }
+}
