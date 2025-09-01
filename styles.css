@@ -136,3 +136,48 @@ body {
   .menu-list { gap: 10px; }
   .menu-list a, .ghost-link { padding: 12px 18px; }
 }
+
+/* ... (mantén todo lo anterior) ... */
+
+/* ===== Descripciones en menú ===== */
+.menu-list .desc {
+  font-size: 0.85rem;
+  color: #555;
+  margin: 4px 0 12px;
+  text-align: center;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+    color: #eee;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.socials {
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.socials a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+}
+
+.site-footer small {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
